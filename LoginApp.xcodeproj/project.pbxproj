@@ -14,6 +14,8 @@
 		4FA9A58D2A096998002D0449 /* LoginAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9A58C2A096998002D0449 /* LoginAppTests.swift */; };
 		4FA9A5972A096998002D0449 /* LoginAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9A5962A096998002D0449 /* LoginAppUITests.swift */; };
 		4FA9A5992A096998002D0449 /* LoginAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9A5982A096998002D0449 /* LoginAppUITestsLaunchTests.swift */; };
+		4FA9A5A72A096B9A002D0449 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9A5A62A096B9A002D0449 /* LoginViewModel.swift */; };
+		4FA9A5AA2A0992CA002D0449 /* LoginErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA9A5A92A0992CA002D0449 /* LoginErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		4FA9A5922A096998002D0449 /* LoginAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA9A5962A096998002D0449 /* LoginAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppUITests.swift; sourceTree = "<group>"; };
 		4FA9A5982A096998002D0449 /* LoginAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4FA9A5A62A096B9A002D0449 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4FA9A5A92A0992CA002D0449 /* LoginErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 		4FA9A56F2A096996002D0449 = {
 			isa = PBXGroup;
 			children = (
+				4FA9A5A52A096B86002D0449 /* ViewModel */,
+				4FA9A5A82A0992A4002D0449 /* Views */,
 				4FA9A57A2A096996002D0449 /* LoginApp */,
 				4FA9A58B2A096998002D0449 /* LoginAppTests */,
 				4FA9A5952A096998002D0449 /* LoginAppUITests */,
@@ -95,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				4FA9A57B2A096996002D0449 /* LoginAppApp.swift */,
-				4FA9A57D2A096996002D0449 /* ContentView.swift */,
 				4FA9A57F2A096998002D0449 /* Assets.xcassets */,
 				4FA9A5812A096998002D0449 /* Preview Content */,
 			);
@@ -125,6 +130,23 @@
 				4FA9A5982A096998002D0449 /* LoginAppUITestsLaunchTests.swift */,
 			);
 			path = LoginAppUITests;
+			sourceTree = "<group>";
+		};
+		4FA9A5A52A096B86002D0449 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4FA9A5A62A096B9A002D0449 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4FA9A5A82A0992A4002D0449 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FA9A57D2A096996002D0449 /* ContentView.swift */,
+				4FA9A5A92A0992CA002D0449 /* LoginErrorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FA9A57E2A096996002D0449 /* ContentView.swift in Sources */,
+				4FA9A5AA2A0992CA002D0449 /* LoginErrorView.swift in Sources */,
 				4FA9A57C2A096996002D0449 /* LoginAppApp.swift in Sources */,
+				4FA9A5A72A096B9A002D0449 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

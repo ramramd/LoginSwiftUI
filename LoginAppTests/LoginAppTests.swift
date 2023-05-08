@@ -9,28 +9,50 @@ import XCTest
 @testable import LoginApp
 
 final class LoginAppTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var subject:LoginViewModel?
+    
+    override func setUp() {
+        super.setUp()
+        subject = LoginViewModel()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        super.tearDown()
+        subject = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testDisplaysErrorMessageWhenUserNameAndPasswordAreEmpty() {
+        subject?.userName = ""
+        subject?.password = ""
+        subject?.isInvalidLogin = false
+        subject?.login()
+        XCTAssertTrue(subject?.isInvalidLogin ?? false)
+        
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testErrorMessageShouldNotDisplayWhenUserNameAndPasswordAreNotEmpty() {
+        subject?.userName = "abc"
+        subject?.password = "xyz"
+        subject?.isInvalidLogin = true
+        subject?.login()
+        XCTAssertFalse(subject?.isInvalidLogin ?? true)
+    }
+    
+    func testDisplaysErrorMessageWhenUserNameIsEmpty() {
+        subject?.userName = ""
+        subject?.password = "xyz"
+        subject?.isInvalidLogin = false
+        subject?.login()
+        XCTAssertTrue(subject?.isInvalidLogin ?? false)
+    }
+    
+    func testDisplaysErrorMessageWhenPasswordIsEmpty() {
+        subject?.userName = "abc"
+        subject?.password = ""
+        subject?.isInvalidLogin = false
+        subject?.login()
+        XCTAssertTrue(subject?.isInvalidLogin ?? false)
     }
 
 }
